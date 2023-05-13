@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rpg-Bz-VAg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U20-pQ-GTY">
+                                <rect key="frame" x="20" y="368" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Custom AVPlayer"/>
+                                <connections>
+                                    <action selector="cutomPlayerButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYb-AB-mnR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UD-ch-Y0Y">
+                                <rect key="frame" x="20" y="499" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Default AV Player"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U20-pQ-GTY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="280" id="IeC-Gt-Vqf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5UD-ch-Y0Y" secondAttribute="trailing" constant="20" id="KfX-T3-KHm"/>
+                            <constraint firstItem="U20-pQ-GTY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LkK-E7-zO2"/>
+                            <constraint firstItem="5UD-ch-Y0Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="d6S-nz-Rsl"/>
+                            <constraint firstItem="5UD-ch-Y0Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="duy-kP-xxD"/>
+                            <constraint firstItem="U20-pQ-GTY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="h2v-iT-bqP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U20-pQ-GTY" secondAttribute="trailing" constant="20" id="qFc-pU-R17"/>
+                            <constraint firstItem="5UD-ch-Y0Y" firstAttribute="top" secondItem="U20-pQ-GTY" secondAttribute="bottom" constant="100" id="xGy-Cx-12u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z0Z-Bw-A0d"/>
+                    <connections>
+                        <outlet property="customPlayerButton" destination="U20-pQ-GTY" id="dHM-1p-YkB"/>
+                        <outlet property="defaultPlayerButton" destination="5UD-ch-Y0Y" id="edy-eQ-Nu8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+        </scene>
+        <!--Custom Player View Controller-->
+        <scene sceneID="Tyn-Ur-aPV">
+            <objects>
+                <viewController storyboardIdentifier="CustomPlayerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wlh-5R-QUF" customClass="CustomPlayerViewController" customModule="PlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eOc-lL-nfO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xL1-Zc-xOd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="233"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xL1-Zc-xOd" secondAttribute="height" multiplier="16:9" id="xrB-el-WeZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Km-Hx-fDr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xL1-Zc-xOd" firstAttribute="top" secondItem="4Km-Hx-fDr" secondAttribute="top" id="11l-ic-AQg"/>
+                            <constraint firstItem="4Km-Hx-fDr" firstAttribute="trailing" secondItem="xL1-Zc-xOd" secondAttribute="trailing" id="MHk-gd-erk"/>
+                            <constraint firstItem="xL1-Zc-xOd" firstAttribute="leading" secondItem="4Km-Hx-fDr" secondAttribute="leading" id="XuC-Zx-Cid"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerContainer" destination="xL1-Zc-xOd" id="MjH-vj-B7E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEJ-G2-rUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1600.0000000000002" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4LA-R1-q89">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rpg-Bz-VAg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gRT-r0-0ew">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iEX-hS-D7x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mLq-Gi-FGQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
